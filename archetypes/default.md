@@ -1,12 +1,14 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-subtitle: ""
 date: {{ .Date }}
 draft: true
 
 images: []
 tags: []
 categories: []
+series: []
+series_weight:
+seriesNavigation:
 featuredImage: ""
 featuredImagePreview: ""
 

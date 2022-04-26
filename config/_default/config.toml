@@ -56,6 +56,11 @@ enableEmoji = true
   # posts = ":year/:month/:filename"
   posts = ":filename"
 
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
+
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -84,6 +89,14 @@ enableEmoji = true
     url = "/categories/"
     title = ""
     weight = 3
+  [[menu.main]]
+    identifier = "series"
+    pre = ""
+    post = ""
+    name = "Series"
+    url = "/series/"
+    title = ""
+    weight = 4
     
 
 
