@@ -55,7 +55,7 @@ Aside from the option of being punched in mosaics, the others can be in line wit
 
 If you set `picgo upload` in the “Command” options, you need to input the absolute path for `picgo`.
 
-For example, use `witch node` and `witch picgo` to get the path of node and picgo.
+For example, use `which node` and `which picgo` to get the path of node and picgo.
 
 Then type:
 
