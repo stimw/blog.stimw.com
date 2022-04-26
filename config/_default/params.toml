@@ -86,7 +86,7 @@ version = "0.2.X"
     enable = true
     # special amount of posts in each home posts page
     paginate = 6
-    # LoveIt DELETED | 0.2.0 replaced with hiddenFromHomePage in params.page
+    # LoveIt DELETED | 0.2.0 replaced with hiddenFromHomePage in page
     # default behavior when you don't set "hiddenFromHomePage" in front matter
     defaultHiddenFromHomePage = false
 
@@ -100,3 +100,103 @@ version = "0.2.X"
   Telegram = ""
   Email = "stimwblog@gmail.com"
   RSS = true # LoveIt NEW | 0.2.0
+  
+# DoIt CHANGED | 0.2.0 Page config
+[page]
+  # DoIt NEW | 0.2.0 whether to hide a page from home page
+  hiddenFromHomePage = false
+  # DoIt NEW | 0.2.0 whether to hide a page from search results
+  hiddenFromSearch = false
+  # DoIt NEW | 0.2.0 whether to enable twemoji
+  twemoji = false
+  # whether to enable lightgallery
+  lightgallery = false
+  # DoIt NEW | 0.2.0 whether to enable the ruby extended syntax
+  ruby = true
+  # DoIt NEW | 0.2.0 whether to enable the fraction extended syntax
+  fraction = true
+  # DoIt NEW | 0.2.0 whether to enable the fontawesome extended syntax
+  fontawesome = true
+  # whether to show link to Raw Markdown content of the content
+  linkToMarkdown = true
+  # DoIt NEW | 0.2.14 configure the link to the source file of the post
+  linkToSource = false
+  # "https://github.com/user/repo/blob/main/{path}"
+  # DoIt NEW | 0.2.13 configure the link to edit the post
+  linkToEdit = false
+  # "https://github.com/user/repo/edit/main/{path}"
+  # "https://gitlab.com/user/repo/-/edit/main/{path}"
+  # "https://bitbucket.org/user/repo/src/main/{path}?mode=edit"
+  # DoIt NEW | 0.2.14 configure the link to report issue for the post
+  linkToReport = false
+  # "https://github.com/user/repo/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/user/repo/blob/main/{path}|"
+  # DoIt NEW | 0.2.4 whether to show the full text content in RSS
+  rssFullText = false
+  # DoIt NEW | 0.2.11 page layout style ("normal", "wide")
+  pageStyle = "normal"
+  # DoIt NEW | 0.2.13 whether to enable series navigation
+  seriesNavigation = true
+  # DoIt NEW | 0.2.13 outdated article reminder config
+  [page.outdatedArticleReminder]
+    enable = false
+    # Display the reminder if the last modified time is more than 90 days ago.
+    reminder = 90
+    # Display warning if the last modified time is more than 180 days ago.
+    warning = 180
+  # DoIt NEW | 0.2.0 Table of the contents config
+  [page.toc]
+    # whether to enable the table of the contents
+    enable = true
+    # DoIt NEW | 0.2.9 whether to keep the static table of the contents in front of the post
+    keepStatic = false
+    # whether to make the table of the contents in the sidebar automatically collapsed
+    auto = true
+  # DoIt CHANGED | 0.2.0 KaTeX mathematical formulas
+  [page.math]
+    enable = true
+    # default block delimiter is $$ ... $$ and \\[ ... \\]
+    blockLeftDelimiter = ""
+    blockRightDelimiter = ""
+    # default inline delimiter is $ ... $ and \\( ... \\)
+    inlineLeftDelimiter = ""
+    inlineRightDelimiter = ""
+    # KaTeX extension copy_tex
+    copyTex = true
+    # KaTeX extension mhchem
+    mhchem = true
+  # DoIt NEW | 0.2.0 Code config
+  [page.code]
+    # whether to show the copy button of the code block
+    copy = true
+    # the maximum number of lines of displayed code by default
+    maxShownLines = 10
+  # DoIt NEW | 0.2.14 Table config
+  # [page.table]
+  #   # whether to enable sorting in the tables
+  #   sort = true
+  # DoIt NEW | 0.2.0 Mapbox GL JS config
+  [page.mapbox]
+    # access token of Mapbox GL JS
+    accessToken = ""
+    # style for the light theme
+    lightStyle = "mapbox://styles/mapbox/light-v9"
+    # style for the dark theme
+    darkStyle = "mapbox://styles/mapbox/dark-v9"
+    # whether to add NavigationControl
+    navigation = true
+    # whether to add GeolocateControl
+    geolocate = true
+    # whether to add ScaleControl
+    scale = true
+    # whether to add FullscreenControl
+    fullscreen = true
+  # DoIt CHANGED | 0.2.0 social share links in post page
+  [page.share]
+    enable = true
+    Twitter = true
+    Facebook = true
+    Linkedin = false
+    Whatsapp = true
+    HackerNews = true
+    Reddit = true
+    Line = true
