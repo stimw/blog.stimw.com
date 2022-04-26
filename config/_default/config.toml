@@ -10,6 +10,11 @@ theme = "DoIt"
 
 enableEmoji = true
 
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
+
 # Markup related config in Hugo
 [markup]
   # Syntax Highlighting
@@ -54,12 +59,8 @@ enableEmoji = true
 # Permalinks config
 [Permalinks]
   # posts = ":year/:month/:filename"
-  posts = ":filename"
+  posts = ":section/:filename"
 
-[taxonomies]
-  category = 'categories'
-  series = 'series'
-  tag = 'tags'
 
 [menu]
   [[menu.main]]
@@ -98,6 +99,7 @@ enableEmoji = true
     title = ""
     weight = 4
     
+
 
 
 
