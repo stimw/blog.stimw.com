@@ -14,7 +14,6 @@ featuredImage: ""
 featuredImagePreview: "https://img.stimw.com/2022/39aadc4e6335a58cba789328440a6eb5.png"
 
 hiddenFromHomePage: false
-lightgallery: true
 rssFullText: false
 ---
 

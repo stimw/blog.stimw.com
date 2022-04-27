@@ -14,7 +14,6 @@ featuredImage: ""
 featuredImagePreview: ""
 
 hiddenFromHomePage: false
-lightgallery: true
 rssFullText: false
 ---
 
