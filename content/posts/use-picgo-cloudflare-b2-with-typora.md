@@ -1,10 +1,11 @@
 ---
-title: "Use Picgo With Typora"
+title: "Use Picgo & Cloudflare & B2 With Typora"
 date: 2022-04-26T22:45:42+08:00
+lastmod: 
 draft: false
 
 images: []
-tags: ["CloudFlare", "Typora"]
+tags: ["Cloudflare", "Typora"]
 categories: ["Dev"]
 series: []
 series_weight:
