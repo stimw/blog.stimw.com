@@ -200,3 +200,21 @@ version = "0.2.X"
     HackerNews = true
     Reddit = true
     Line = true
+
+  [page.comment]
+    enable = true
+    [page.comment.waline]
+        # DoIt CHANGED | 0.2.13
+        enable = true
+        serverURL = "https://waline-blog-e4ul75i2d-stimw.vercel.app/"
+        visitor = false
+        emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo']
+        meta = ['nick', 'mail', 'link']
+        requiredMeta = ['nick', 'mail']
+        login = 'enable'
+        wordLimit = 0
+        pageSize = 10
+        uploadImage = false
+        highlight = true
+        mathTagSupport = true
+        commentCount = true
