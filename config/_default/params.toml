@@ -30,7 +30,7 @@ version = "0.2.X"
   # LoveIt NEW | 0.2.0 Custom content (HTML format is supported)
   custom = ''
   # LoveIt NEW | 0.2.0 whether to show Hugo and theme info
-  hugo = false
+  hugo = true
   # LoveIt NEW | 0.2.0 whether to show copyright info
   copyright = true
   # LoveIt NEW | 0.2.0 whether to show the author
@@ -38,8 +38,6 @@ version = "0.2.X"
   # Site creation time
   since = 2022
   # ICP info only in China (HTML format is supported)
-  icp = ""
-  # license info (HTML format is supported)
   license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
 # LoveIt NEW | 0.2.0 Section (all posts) page config
@@ -211,10 +209,11 @@ version = "0.2.X"
         emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo']
         meta = ['nick', 'mail', 'link']
         requiredMeta = ['nick', 'mail']
-        login = 'enable'
+        login = 'disable'
         wordLimit = 0
         pageSize = 10
         uploadImage = false
+        imageUploader = false
         highlight = true
         mathTagSupport = true
         commentCount = true
