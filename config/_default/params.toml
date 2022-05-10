@@ -30,7 +30,7 @@ version = "0.2.X"
   # LoveIt NEW | 0.2.0 Custom content (HTML format is supported)
   custom = ''
   # LoveIt NEW | 0.2.0 whether to show Hugo and theme info
-  hugo = true
+  hugo = false
   # LoveIt NEW | 0.2.0 whether to show copyright info
   copyright = true
   # LoveIt NEW | 0.2.0 whether to show the author
@@ -212,8 +212,6 @@ version = "0.2.X"
         login = 'disable'
         wordLimit = 0
         pageSize = 10
-        uploadImage = false
         imageUploader = false
-        highlight = true
-        mathTagSupport = true
-        commentCount = true
+        highlighter = false
+        texRenderer = false
