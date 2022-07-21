@@ -1,7 +1,7 @@
 ---
 title: "Leetcode Locked Questions Solution (Updating)"
 date: 2022-07-21T16:58:55+10:00
-lastmod: 
+lastmod: 2022-07-22
 draft: false
 
 images: []
@@ -44,4 +44,87 @@ class Solution:
 
         res = min(f[n][0], f[n][1], f[n][2])
         return res
+```
+
+## 361. Bomb Enemy
+```python
+class Solution:
+    """
+    @param grid: Given a 2D grid, each cell is either 'W', 'E' or '0'
+    @return: an integer, the maximum enemies you can kill using one bomb
+    """
+    def max_killed_enemies(self, grid: List[List[str]]) -> int:
+        m = len(grid)
+        if m == 0:
+            return 0
+        n = len(grid[0])
+        dp = [[0 for _ in range(n)] for _ in range(m)]
+        res = [[0 for _ in range(n)] for _ in range(m)]
+
+        # up
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == 'W':
+                    dp[i][j] = 0
+                else:
+                    dp[i][j] = 0
+                    if grid[i][j] == 'E':
+                        dp[i][j] = 1
+                    if (i - 1 >= 0):
+                        dp[i][j] += dp[i-1][j]
+                        
+                res[i][j] += dp[i][j]
+        
+        # down
+        for i in range(m-1, -1, -1):
+            for j in range(n):
+                if grid[i][j] == 'W':
+                    dp[i][j] = 0
+                else:
+                    dp[i][j] = 0
+                    if grid[i][j] == 'E':
+                        dp[i][j] = 1
+                    if (i + 1 < m):
+                        dp[i][j] += dp[i+1][j]
+                        
+                res[i][j] += dp[i][j]
+
+        # left
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == 'W':
+                    dp[i][j] = 0
+                else:
+                    dp[i][j] = 0
+                    if grid[i][j] == 'E':
+                        dp[i][j] = 1
+                    if (j - 1 >= 0):
+                        dp[i][j] += dp[i][j-1]
+                        
+                res[i][j] += dp[i][j]
+
+        # right
+        for i in range(m):
+            for j in range(n-1, -1, -1):
+                if grid[i][j] == 'W':
+                    dp[i][j] = 0
+                else:
+                    dp[i][j] = 0
+                    if grid[i][j] == 'E':
+                        dp[i][j] = 1
+                    if (j + 1 < n):
+                        dp[i][j] += dp[i][j+1]
+                        
+                res[i][j] += dp[i][j]
+
+        result = 0
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == '0' and res[i][j] > result:
+                    result = res[i][j]
+        
+        for i in range(m):
+            print(res[i])
+
+        return result
 ```
