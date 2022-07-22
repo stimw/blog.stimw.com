@@ -46,6 +46,47 @@ class Solution:
         return res
 ```
 
+## 265. Paint House II
+```python
+class Solution:
+    """
+    @param costs: n x k cost matrix
+    @return: an integer, the minimum cost to paint all houses
+    """
+    def min_cost_i_i(self, costs: List[List[int]]) -> int:
+        n = len(costs)
+        if costs == None or len(costs) == 0:
+            return 0
+        k = len(costs[0])
+
+        j1, j2 = 0, 0
+        dp = [[0 for _ in range(k)] for _ in range(n+1)]
+
+        for i in range(1, n+1):
+            min1, min2 = float("inf"), float("inf")
+            for j in range(k):
+                # get the min1 and min2
+                if dp[i-1][j] < min1:
+                    min2 = min1
+                    j2 = j1
+                    min1 = dp[i-1][j]
+                    j1 = j
+                else:
+                    if dp[i-1][j] < min2:
+                        min2 = dp[i-1][j]
+                        j2 = j
+                
+            for j in range(k):
+                if j == j1:  # dp[i-1][j] is the min1
+                    #          min2
+                    dp[i][j] = dp[i-1][j2] + costs[i-1][j]
+                else:
+                    #          min1
+                    dp[i][j] = dp[i-1][j1] + costs[i-1][j]
+
+        return min(dp[n])
+```
+
 ## 361. Bomb Enemy
 ```python
 class Solution:
